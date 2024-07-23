@@ -1,0 +1,78 @@
+/* Hero CSS */
+
+/* Import Google Fonts for Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.hero {
+    display: flex;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    color: #ffffff; /* White text color for better contrast */
+    height: 92vh;
+    padding: 0 30px;
+    align-items: center;
+    overflow: hidden; /* Hide overflow to maintain a clean layout */
+    font-family: 'Poppins', sans-serif; /* Font family updated to Poppins */
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.hero-text {
+    font-size: 4rem; /* Large size for prominence */
+    font-weight: 600; /* Semi-bold text for emphasis */
+    margin-bottom: 15px;
+    line-height: 1.2;
+    word-spacing: 1%;
+    color: #ffffff; /* White color for main heading */
+    overflow: hidden; /* Ensures no overflow during animation */
+    white-space: nowrap; /* Keeps text in a single line */
+    animation: textGlow 2s ease-in-out infinite; /* Animation for text glow effect */
+}
+
+/* Cool Text Glow Effect */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); } /* Subtle white glow at start */
+    50% { text-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6); } /* Cyan glow in the middle */
+    100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); } /* Subtle white glow at end */
+}
+
+.hero-description {
+    font-size: 1.6rem; /* Slightly smaller for description */
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #e0e0e0; /* Light grey for readability */
+}
+
+.hero-image {
+    flex: 1;
+    background: url('Images/home-image.png') center center / cover no-repeat; /* Adjusted for full coverage */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for a 3D effect */
+    height: 80%; /* Adjust height as needed */
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Change cursor to a pointer */
+}
+
+.hero-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Keyframes for typewriter effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Keyframes for blinking caret */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    5% { border-color: #ffffff; }
+}
